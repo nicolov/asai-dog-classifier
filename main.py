@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 global graph
 global model
-model = get_model()
+model = get_model(weights=None)
 model.load_weights("./trained_model.chkpt")
 graph = tf.get_default_graph()
 

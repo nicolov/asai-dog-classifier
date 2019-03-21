@@ -32,7 +32,7 @@ def main():
     parser.add_argument("inpath")
     args = parser.parse_args()
 
-    model = get_model()
+    model = get_model(weights=None)
     model.load_weights("./trained_model.chkpt")
 
     print(predict_file_path(model, args.inpath))

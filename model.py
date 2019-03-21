@@ -6,10 +6,10 @@ from tensorflow.keras.models import Sequential, Model
 from tensorflow.keras.layers import Dropout, Flatten, Dense, Input
 
 
-def get_model():
+def get_model(weights="imagenet"):
     input_tensor = Input(shape=(224, 224, 3))
     model = applications.MobileNetV2(
-        weights="imagenet",
+        weights=weights,
         input_tensor=input_tensor,
         input_shape=(224, 224, 3),
         include_top=False,
